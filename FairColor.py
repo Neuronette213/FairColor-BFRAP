@@ -193,7 +193,7 @@ def pareto_efficient_solutions(original_list, keep_percentage,pruning_criteria):
     return pruned_pareto_solutions
 
 #Displaying Statistics about the obtained soultions
-def statistics(solutions,upper_ms,upper_minps):
+def statistics(solutions,upper_ms,upper_minps,running_time):
   print('Running time:',running_time)
   print('Upper bounds for Matching score:',upper_ms)
   print('Upper Bound for Minimum paper score:', upper_minps)
@@ -338,7 +338,7 @@ def Faircolor(num_inst, maxiter, keep_percentage,pruning_criteria):
   end = timer()
   running_time=end-start
   #Displaying statitics about the solutions found during the local search process
-  statistics(best_solutions,upper_ms,upper_minps)
+  statistics(best_solutions,upper_ms,upper_minps,running_time)
   #Ploting and saving overall matching scores and minimum paper scores for solutions found during the local search process
   plot_best_solutions(best_solutions,num_inst)
 
