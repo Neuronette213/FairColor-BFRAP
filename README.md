@@ -12,5 +12,5 @@ ICLR'18 dataset has been made available by Xu et al.:[On Strategyproof Conferenc
 
 ICA2IT'19 dataset has been provided by the conference organizers. Similarity scores have been calculated using the approach proposed by Medakene et al.: [A New Approach for Computing the Matching Degree in the Paper-to-Reviewer Assignment Problem](https://doi.org/10.1109/ICTAACS48474.2019.8988127)
 
-Dataset_statistics.py displays datasets statistics 
 ## Code
+[Dataset_statistics.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Dataset_statistics.py) displays datasets statistics.
