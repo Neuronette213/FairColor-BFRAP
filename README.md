@@ -10,7 +10,9 @@ MIDL'18, CVPR'17, and CVPR'18 datasets have been made available by Kobren et al.
 
 ICLR'18 dataset has been made available by Xu et al.:[On Strategyproof Conference Peer Review](https://github.com/xycforgithub/StrategyProof_Conference_Review)
 
-ICA2IT'19 dataset has been provided by the conference organizers. Similarity scores have been calculated using the approach proposed by Medakene et al.: [A New Approach for Computing the Matching Degree in the Paper-to-Reviewer Assignment Problem](https://doi.org/10.1109/ICTAACS48474.2019.8988127)
+The conference organizers have provided the ICA2IT'19 dataset. Similarity scores have been calculated using the approach proposed by Medakene et al.: [A New Approach for Computing the Matching Degree in the Paper-to-Reviewer Assignment Problem](https://doi.org/10.1109/ICTAACS48474.2019.8988127)
 
 ## Code
-[Dataset_statistics.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Dataset_statistics.py) displays datasets statistics.
+[Dataset_statistics.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Dataset_statistics.py) displays dataset statistics.
+
+[Results_comparison.py]() provides the FairColor, FairFlow, and FairIR comparison results. 
