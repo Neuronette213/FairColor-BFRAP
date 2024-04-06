@@ -8,8 +8,7 @@ import gurobipy as gp
 """# Paths to Folders for Data Importation and Saving Results"""
 
 Data_folder = './Data_Instances'
-Results_folder = './FairColor_Results'
-Plots_folder = './FairColor_Plots'
+Results_folder = './FairIR_Results'
 
 """## FAIRIR Code"""
 
