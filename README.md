@@ -1,6 +1,5 @@
 # FairColor-BFRAP
-This repository implements FairColor from our paper, FairColor: An Efficient Algorithm for the Balanced and Fair
-Reviewer Assignment Problem 
+This repository implements FairColor from our paper, FairColor: An Efficient Algorithm for the Balanced and Fair Reviewer Assignment Problem 
 
 ## Datasets
 Four instances from real conferences: MIDL'18 (Instance 30), CVPR'17 (Instance 40), CVPR'18 (Instance 50), and ICA2IT'19 (Instance 60), and two synthetic datasets: CVPR418Extd (Instance 70) and ICLR'18 (Instance 80) are available here 
@@ -15,4 +14,4 @@ The conference organizers have provided the ICA2IT'19 dataset. Similarity scores
 ## Code
 [Dataset_statistics.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Dataset_statistics.py) displays dataset statistics.
 
-[Results_comparison.py]() provides the FairColor, FairFlow, and FairIR comparison results. 
+[Results_comparison.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Results_comparison.py) provides the FairColor, FairFlow, and FairIR comparison results. 
