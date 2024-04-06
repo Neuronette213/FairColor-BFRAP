@@ -13,8 +13,7 @@ The conference organizers have provided the ICA2IT'19 dataset. Similarity scores
 
 [Dataset_statistics.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Dataset_statistics.py) displays dataset statistics.
 
-## Baselines
-FairFlow and FairIR 
-
+## Experiments
+We compare FairColor to FairFlow and FairIR. Kobren et al. designed both algorithms to find fair and efficient assignments. They are adapted here to load balance constraints. 
 
 [Results_comparison.py](https://github.com/Neuronette213/FairColor-BFRAP/blob/main/Results_comparison.py) provides the FairColor, FairFlow, and FairIR comparison results. 
