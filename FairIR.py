@@ -472,45 +472,44 @@ class FairIR(Basic):
             self.m.update()
             return self.round_fractional(integral_assignments, count + 1)
 
+    def Fairir(num_inst)
+        instance_file_name = f'instance_{num_inst}.npz'
+        instance_file_path = Data_folder + instance_file_name
+        instance_data = np.load(instance_file_path)
+        #affinity score matrix and t
+        matrix=instance_data['affinity_scores']
+        t = int(instance_data['number_t'])
+        #computation of n,m, upper and lower bounds l1 and l2
+        n , m = matrix.shape[0], matrix.shape[1]
+        l1 = math.floor(n * t / m)
+        l2 = math.ceil(n * t / m)
+        n,m,t,l1,l2
+        mtr=np.transpose(matrix)
+        
+        loads =np.full(m, l2)
+        loads_lb = np.full(m, l1)
+        coverages = np.full(n, t)
+        
+        if __name__ == "__main__":
+            init_makespan = 0.7
+            ws=mtr
+            print(ws)
+            x = FairIR(loads, loads_lb, coverages, ws, env_params=params)
+            s = time.time()
+            x.solve()
+            d=x.sol_as_mat()
+            print(x.sol_as_mat())
+            print(x.objective_val())
+            Time=time.time() - s
+            print(time.time() - s)
+            print("[done.]")
+            d2 = np.transpose(d)
+            print(np.shape(d2),np.shape(matrix))
+            # Save the results to the destination folder
+            result_file_name = f'instance_{num_inst}_FairIR_result.npz'
+            result_file_path = Results_folder + result_file_name
+            np.savez(result_file_path, matrix_assign=d2,time=Time)
+
 #Loading the instance data
-#Instances: 30=MIDL, 40=CVPR'17, 50=CVPR'18, 60=ICA2IT'19, 70=CVPR'18-Extended, 80=ICLR'18
-num_inst=80
-instance_file_name = f'instance_{num_inst}.npz'
-instance_file_path = Data_folder + instance_file_name
-instance_data = np.load(instance_file_path)
-#affinity score matrix and t
-matrix=instance_data['affinity_scores']
-t = int(instance_data['number_t'])
-#computation of n,m, upper and lower bounds l1 and l2
-n , m = matrix.shape[0], matrix.shape[1]
-l1 = math.floor(n * t / m)
-l2 = math.ceil(n * t / m)
-n,m,t,l1,l2
-mtr=np.transpose(matrix)
-
-loads =np.full(m, l2)
-loads_lb = np.full(m, l1)
-coverages = np.full(n, t)
-
-if __name__ == "__main__":
-    init_makespan = 0.7
-    ws=mtr
-    print(ws)
-    x = FairIR(loads, loads_lb, coverages, ws, env_params=params)
-    s = time.time()
-    x.solve()
-    d=x.sol_as_mat()
-    print(x.sol_as_mat())
-    print(x.objective_val())
-    Time=time.time() - s
-    print(time.time() - s)
-    print("[done.]")
-    d2 = np.transpose(d)
-    print(np.shape(d2),np.shape(matrix))
-    # Save the results to the destination folder
-    result_file_name = f'instance_{num_inst}_FairIR_result.npz'
-    result_file_path = Results_folder + result_file_name
-    np.savez(result_file_path, matrix_assign=d2,time=Time)
-
-model.dispose()
-env.dispose()
+#Instances: 30=MIDL, 40=CVPR'17, 50=CVPR'18, 60=ICA2IT'19, 70=CVPR'18Extd, 80=ICLR'18
+Fairir(40)
