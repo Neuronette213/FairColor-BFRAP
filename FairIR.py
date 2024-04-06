@@ -509,7 +509,7 @@ if __name__ == "__main__":
     print(np.shape(d2),np.shape(matrix))
     # Save the results to the destination folder
     result_file_name = f'instance_{num_inst}_FairIR_result.npz'
-    result_file_path = fairIR_results_folder + result_file_name
+    result_file_path = Results_folder + result_file_name
     np.savez(result_file_path, matrix_assign=d2,time=Time)
 
 model.dispose()
