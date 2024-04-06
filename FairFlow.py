@@ -610,7 +610,7 @@ mtr2 = np.transpose(mtr)
 d2 = np.transpose(d)
 # Define a filename for saving the results
 result_file_name = f'instance_{num_inst}_FairFlow_result.npz'
-result_file_path = fairflow_results_folder + result_file_name
+result_file_path = Results_folder + result_file_name
 
 # Save the results to the destination folder
 np.savez(result_file_path, matrix_assign=d2, time=Time)
