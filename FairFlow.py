@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 # FairFlow Code
-"""
+"""# Paths to Folders for Data Importation and Saving Results"""
 
+Data_folder = './Data_Instances'
+Results_folder = './FairFlow_Results'
 
 
 from collections import defaultdict
