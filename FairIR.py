@@ -5,9 +5,11 @@ import gurobipy as gp
 
 
 
-# Path to the source and destination folders
-source_folder = '/content/drive/MyDrive/DATA/Real_Data_Instances/'
-destination_folder = '/content/drive/MyDrive/DATA/FairIR_Results/'
+"""# Paths to Folders for Data Importation and Saving Results"""
+
+Data_folder = './Data_Instances'
+Results_folder = './FairColor_Results'
+Plots_folder = './FairColor_Plots'
 
 """## FAIRIR Code"""
 
