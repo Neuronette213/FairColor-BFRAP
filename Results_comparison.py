@@ -114,7 +114,7 @@ def results_faircolor(instance_number):
         idx = int(re.match(f'instance_\d+_(?P<idx>\d+)_FairColor_result\.npz', instance_file_name).group('idx'))
         faircolor_results = np.load(instance_file_path,allow_pickle=True)
         faircolor_assignment = faircolor_results['assignment']
-        faircolor_time = faircolor_results['time']
+        faircolor_time = faircolor_results['run_time']
         ps,ms,prop=calculate_metrics(mat_scores, faircolor_assignment)
         balance=balanced(faircolor_assignment)
         ass=f'FairColor_Assignment_{idx}'
@@ -138,7 +138,7 @@ def alg_results(instance_number, algname):
 
 #Select an instance
 #80=ICLR'18, 70=CVPR'18 extended (more than 10000 papers), 60=ICA2IT'19,50=CVPR'18, 40=CVPR'17, 30=MIDL
-num_inst = 60
+num_inst = 30
 #Load data instance
 instance_file_name = f'instance_{num_inst}.npz'
 instance_file_path = os.path.join(Data_folder, instance_file_name)
