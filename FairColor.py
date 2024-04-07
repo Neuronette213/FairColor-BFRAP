@@ -10,10 +10,12 @@ import matplotlib.pyplot as plt
 
 """# Paths to Folders for Data Importation and Saving Results"""
 
-# Path to the source and destination folders
 Data_folder = './Data_Instances'
 Results_folder = './FairColor_Results'
 Plots_folder = './FairColor_Plots'
+
+os.makedirs(Results_folder, exist_ok=True)
+os.makedirs(Plots_folder, exist_ok=True)
 
 """# Functions"""
 
