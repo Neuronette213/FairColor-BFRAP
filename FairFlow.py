@@ -2,12 +2,18 @@
 # FairFlow Code
 """# Paths to Folders for Data Importation and Saving Results"""
 
+import os
+
 Data_folder = './Data_Instances'
 Results_folder = './FairFlow_Results'
 
+os.makedirs(Results_folder, exist_ok=True)
 
 from collections import defaultdict
-!python3 -m pip install ortools==9.3.10497
+
+#requires ortools==9.3.10497
+#!python3 -m pip install ortools==9.3.10497
+
 from ortools.graph import pywrapgraph
 
 import numpy as np
@@ -575,41 +581,41 @@ class FairFlow(object):
 
         return self.sol_as_mat()
 
-    #code Fairflow main adapted to load balance constraints
-    def Fairflow(num_inst):
-      instance_file_name = f'instance_{num_inst}.npz'
-      instance_file_path = Data_folder + instance_file_name
-      # Load the instance data
-      instance_data = np.load(instance_file_path)
-      #affinity score matrix and t
-      matrix=instance_data['affinity_scores']
-      t = int(instance_data['number_t'])
-      #computation of n,m, upper and lower bounds l1 and l2 for balanced workloads
-      n , m = matrix.shape[0], matrix.shape[1]
-      l1 = math.floor(n * t / m)
-      l2 = math.ceil(n * t / m)
-      n,m,t,l1,l2
-      mtr=np.transpose(matrix)
+#code Fairflow main adapted to load balance constraints
+def Fairflow(num_inst):
+    instance_file_name = f'instance_{num_inst}.npz'
+    instance_file_path = os.path.join(Data_folder, instance_file_name)
+    # Load the instance data
+    instance_data = np.load(instance_file_path)
+    #affinity score matrix and t
+    matrix=instance_data['affinity_scores']
+    t = int(instance_data['number_t'])
+    #computation of n,m, upper and lower bounds l1 and l2 for balanced workloads
+    n , m = matrix.shape[0], matrix.shape[1]
+    l1 = math.floor(n * t / m)
+    l2 = math.ceil(n * t / m)
     
-      loads =np.full(m, l2)
-      loads_lb = np.full(m, l1)
-      coverages = np.full(n, t)
-    
-      x = FairFlow(loads, loads_lb , coverages, mtr)
-      s = time.time()
-      x.solve()
-      print(x.objective_val()[0])
-      Time=time.time() - s
-      print("[done.]")
-      d = x.sol_as_mat()
-      np.save("d.npy",d)
-      mtr2 = np.transpose(mtr)
-      d2 = np.transpose(d)
-      # Define a filename for saving the results
-      result_file_name = f'instance_{num_inst}_FairFlow_result.npz'
-      result_file_path = Results_folder + result_file_name
-      # Save the results to the destination folder
-      np.savez(result_file_path, matrix_assign=d2, time=Time)  
+    mtr=np.transpose(matrix)
+
+    loads =np.full(m, l2)
+    loads_lb = np.full(m, l1)
+    coverages = np.full(n, t)
+
+    x = FairFlow(loads, loads_lb , coverages, mtr)
+    s = time.time()
+    x.solve()
+    print(x.objective_val()[0])
+    Time=time.time() - s
+    print("[done.]")
+    d = x.sol_as_mat()
+    np.save("d.npy",d)
+    mtr2 = np.transpose(mtr)
+    d2 = np.transpose(d)
+    # Define a filename for saving the results
+    result_file_name = f'instance_{num_inst}_FairFlow_result.npz'
+    result_file_path = os.path.join(Results_folder, result_file_name)
+    # Save the results to the destination folder
+    np.savez(result_file_path, matrix_assign=d2, time=Time)  
 
 #Select an instance
 #80=ICLR'18, 70=CVPR'18 extended (more than 10000 papers), 60=ICA2IT'19,50=CVPR'18, 40=CVPR'17, 30=MIDL
