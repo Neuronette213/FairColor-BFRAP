@@ -12,7 +12,7 @@ MIDL'18, CVPR'17, and CVPR'18 datasets have been made available by Kobren et al.
 
 ICLR'18 dataset has been made available by Xu et al.:[On Strategyproof Conference Peer Review](https://github.com/xycforgithub/StrategyProof_Conference_Review)
 
-C1 to C5 instances have been generated according to the paper by Stelmakh et al.: [PeerReview4All:
+C1 to C5 instances have been generated according to Stelmakh et al.'s paper: [PeerReview4All:
 Fair and Accurate Reviewer Assignment in Peer Review](https://www.jmlr.org/papers/volume22/20-190/20-190.pdf)
 
 The conference organizers have provided the ICA2IT'19 dataset. Similarity scores have been calculated using the approach proposed by Medakene et al.: [A New Approach for Computing the Matching Degree in the Paper-to-Reviewer Assignment Problem](https://doi.org/10.1109/ICTAACS48474.2019.8988127)
