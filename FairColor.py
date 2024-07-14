@@ -361,8 +361,12 @@ def save_solutions(pruned_pareto_set, instance_number,run_time):
 
 if __name__ == '__main__':
     #Select an instance
-    #80=ICLR'18, 70=CVPR'18 extended (more than 10000 papers), 60=ICA2IT'19,50=CVPR'18, 40=CVPR'17, 30=MIDL
-    instance_info = {30: "Midl'18", 40: "CVPR'17", 50: "CVPR'18", 60: "ICA2IT'19", 70: "CVPR'18Extd", 80: "ICLR'18"}
+    # 1 = Instance C1, 2 = Instance C2, 3 = Instance C3, 4 = Instance C4, 5 = Instance C5,
+    # 30 = MIDL, 40 = CVPR'17, 50 = CVPR'18, 60 = ICA2IT'19, 70 = CVPR'18Extd_2, 80 = ICLR'18, 
+    # 90 = CVPR'17Extd_4, 100 = CVPR'17Extd_3, 110 = MIDL'18Extd_4, 120 = ICA2IT'19Extd_4, 130 = ICLR'18Extd_4. 
+    instance_info = { 1: "C1", 2:"C2", 3: "C3", 4: "C4", 5: "C5",
+                     30: "Midl'18", 40: "CVPR'17", 50: "CVPR'18", 60: "ICA2IT'19", 70: "CVPR'18Extd_2", 80: "ICLR'18",
+                     90: "CVPR'17Extd_4", 100: "CVPR'17Extd_3", 110: "MIDL'18Extd_4", 120: "ICA2IT'19Extd_4", 130: "ICLR'18Extd_4"}
     num_inst=30 #Number of instance
     maxiter=100 #Number of iterations during the local search process
     keep_percentage=70 #This is the percentage of solutions that are kept from the pareto set sorted wrt the pruning criteria, such that
