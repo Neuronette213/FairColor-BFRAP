@@ -278,14 +278,14 @@ def Faircolor(num_inst, maxiter, keep_percentage,pruning_criteria):
 
   #Sigma initialization and stepsize
   sigma=np.percentile(matrix,25,axis=1) #first quartile Q1
-  stepsize=(np.max(init_paper_score)-np.min(sigma))/200
+  stepsize=(init_paper_score-sigma)/200
   #Local search Loop
   for a in range(1,maxiter): #100 for all instances
     #print('I am at iteration ',a)
     assign_score=matrix*assign_matrix
     paper_score=np.sum(assign_score,axis=1)
     #Saving the best solutions that improve maxmin
-    if (np.min(paper_score) > np.min(best_paper_score)):
+    if (np.min(paper_score) > np.min(best_paper_score)) or (np.sum(paper_score)> np.sum(best_paper_score)):
       best_assign_matrix=np.copy(assign_matrix)
       assignment = extract_reviewers_indices(best_assign_matrix,t)
       best_assign_score=matrix*best_assign_matrix
