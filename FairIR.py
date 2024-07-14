@@ -516,5 +516,8 @@ def Fairir(num_inst):
 
 if __name__ == "__main__":
     #Loading the instance data
-    #Instances: 30=MIDL, 40=CVPR'17, 50=CVPR'18, 60=ICA2IT'19, 70=CVPR'18Extd, 80=ICLR'18
+    
+    # 1 = Instance C1, 2 = Instance C2, 3 = Instance C3, 4 = Instance C4, 5 = Instance C5,
+    # 30 = MIDL, 40 = CVPR'17, 50 = CVPR'18, 60 = ICA2IT'19, 70 = CVPR'18Extd_2, 80 = ICLR'18, 
+    # 90 = CVPR'17Extd_4, 100 = CVPR'17Extd_3, 110 = MIDL'18Extd_4, 120 = ICA2IT'19Extd_4, 130 = ICLR'18Extd_4. 
     Fairir(30)
