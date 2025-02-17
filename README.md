@@ -1,5 +1,5 @@
 # FairColor-BFRAP
-This repository implements FairColor from our paper, FairColor: An Efficient Algorithm for the Balanced and Fair Reviewer Assignment Problem 
+This repository implements FairColor from our paper, [FairColor: An Efficient Algorithm for the Balanced and Fair Reviewer Assignment Problem](https://doi.org/10.1016/j.ipm.2024.103865)
 
 ## Datasets
 Four instances from real conferences: MIDL'18 (Instance 30), CVPR'17 (Instance 40), CVPR'18 (Instance 50), ICA2IT'19 (Instance 60)
